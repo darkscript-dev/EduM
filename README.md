@@ -64,6 +64,13 @@ EduM/
 ├── schooldb.sql
 └── README.md
 
+## Application Backup
+
+If you have any issues cloning the repository or setting up the project, you can download a pre-packaged version of the application from the following drive link:
+
+[Download EduM Application (ZIP)](https://drive.google.com/drive/folders/1KhsluVZH5J4EK8l5DCCKq1IoGyAzba06?usp=sharing)
+
+**Note:** This ZIP file contains all the necessary files, including the libraries and the database schema.  Please refer to the instructions above for database setup and running the application.
 
 ## Author
 
