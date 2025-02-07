@@ -55,14 +55,7 @@ To build and run this application, you will need the following software:
 1. In NetBeans, right-click on the main application file (e.g., `main.java` in the `management` package).
 2. Select "Run File."
 
-## Project Structure
-EduM/
-├── src/
-│   └── ... (your Java source code)
-├── lib/
-│   └── ... (JAR files)
-├── schooldb.sql
-└── README.md
+
 
 ## Application Backup
 
