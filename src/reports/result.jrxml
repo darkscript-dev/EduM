@@ -1,0 +1,77 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="result" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef1a5fb2-582d-4cbb-a45b-d954ca7f18bf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="c2Nob29sZGIuc3R1ZGVudHMgLDE1NSwxNSxjNGYzNjVkNi0xMjhlLTQ5NTEtOWI3Ni1iMGY4YWFh&#xa;MTcwZjI7c2Nob29sZGIucmVzdWx0cyAsMTUsNDAsM2U3MTY4MjktNjgxMi00ZGEzLThmYTItZWM5&#xa;NTFkODIyODllOw=="/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="479"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="521"/>
+	<parameter name="student_id" class="java.lang.String"/>
+	<query language="sql"><![CDATA[SELECT schooldb.students.student_id,
+	schooldb.students.name,
+	schooldb.results.course_name,
+	schooldb.results.marks
+FROM schooldb.results
+	INNER JOIN schooldb.students ON 
+	 schooldb.results.student_id = schooldb.students.student_id 
+WHERE 
+	 schooldb.students.student_id = '$P!{student_id}']]></query>
+	<field name="student_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="student_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="student_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="students"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="students"/>
+	</field>
+	<field name="course_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="course_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="course_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="results"/>
+	</field>
+	<field name="marks" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="marks"/>
+		<property name="com.jaspersoft.studio.field.label" value="marks"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="results"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="77b7af1f-68a2-486f-9142-8644281f7a33" x="-20" y="10" width="595" height="60" markup="styled" fontSize="20.0" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Student Resut Sheet]]></text>
+		</element>
+	</title>
+	<pageHeader height="56" splitType="Stretch">
+		<element kind="staticText" uuid="e6f6b7c7-715f-4e0e-a738-94326af83dce" x="9" y="14" width="100" height="30" markup="styled" fontSize="14.0" vTextAlign="Middle">
+			<text><![CDATA[Student ID :]]></text>
+		</element>
+		<element kind="textField" uuid="d75aeb8e-b070-4e04-87fe-566f865df000" x="110" y="13" width="100" height="30" markup="styled" fontSize="14.0" hTextAlign="Left" vTextAlign="Middle">
+			<expression><![CDATA[$F{student_id}]]></expression>
+		</element>
+	</pageHeader>
+	<columnHeader height="114" splitType="Stretch">
+		<element kind="staticText" uuid="450f9571-686d-4087-8fc5-46cb7e1fc0f0" x="9" y="0" width="100" height="30" markup="styled" fontSize="14.0" vTextAlign="Middle">
+			<text><![CDATA[Name :]]></text>
+		</element>
+		<element kind="staticText" uuid="3fb76ae0-2c2d-416e-b84b-673aa0193984" x="9" y="31" width="100" height="30" markup="styled" fontSize="14.0" vTextAlign="Middle">
+			<text><![CDATA[Course :]]></text>
+		</element>
+		<element kind="textField" uuid="4465fbe4-a20f-48cd-9307-f91f087e5cec" x="109" y="0" width="371" height="30" markup="styled" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+			<expression><![CDATA[$F{name}]]></expression>
+		</element>
+		<element kind="textField" uuid="bc2cae17-20b8-4c2f-88c2-b059de3c4deb" x="110" y="31" width="270" height="30" markup="styled" fontSize="12.0" vTextAlign="Middle">
+			<expression><![CDATA[$F{course_name}]]></expression>
+		</element>
+		<element kind="staticText" uuid="a262a1d6-8008-4c45-90f7-af7e0a5d6cc0" x="9" y="77" width="100" height="30" markup="styled" fontSize="14.0" vTextAlign="Middle">
+			<text><![CDATA[Marks :]]></text>
+		</element>
+		<element kind="textField" uuid="68e504a3-1ffb-447f-9232-b094ddc6b86d" x="109" y="77" width="100" height="30" markup="styled" fontSize="12.0" vTextAlign="Middle">
+			<expression><![CDATA[$F{marks}]]></expression>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
