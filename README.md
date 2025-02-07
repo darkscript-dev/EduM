@@ -1,0 +1,71 @@
+# EduM - Educational Management System
+
+This is a Java Swing application for managing students, teachers, courses, and schedules.
+
+## Table of Contents
+
+- [Software Requirements](#software-requirements)
+- [Project Setup](#project-setup)
+- [Database Setup](#database-setup)
+- [Running the Application](#running-the-application)
+- [Project Structure](#project-structure)
+- [Author](#author)
+
+## Software Requirements
+
+To build and run this application, you will need the following software:
+
+- **Java Development Kit (JDK) 23:**  Get it from [https://adoptium.net/](https://adoptium.net/).
+- **NetBeans IDE:**  (Or any IDE capable of building Java Swing applications).
+- **MySQL Server:** (Version 8.0 or higher recommended).
+
+## Project Setup
+
+1. **Clone the Repository:**
+   - Open a terminal or Git Bash.
+   - Navigate to your desired project location.
+   - Run: `git clone https://github.com/savindukeshara/EduM.git`
+
+2. **Open in NetBeans:**
+   - Open NetBeans.
+   - "File" -> "Open Project..."
+   - Select the `EduM` project folder.
+
+3. **Add Libraries (if not automatically recognized):**
+   - In NetBeans, right-click on the project -> "Properties" -> "Libraries".
+   - If the libraries under "Compile-time Libraries" show errors (red icons), you may need to re-add them. The JAR files are located in the `lib` folder of the project. Use "Add JAR/Folder..." to add them.
+
+## Database Setup
+
+1. **Create Database:**
+   - Open your MySQL client (MySQL Workbench, command-line, etc.).
+   - Connect to your MySQL server.
+   - Run: `CREATE DATABASE schooldb;`
+
+2. **Import Schema:**
+   - In your MySQL client, select the `schooldb` database.
+   - Run the `schooldb.sql` script (located in the project root) to create the tables.  In MySQL Workbench, open the file and click the Execute button. In the command line client, you can use `SOURCE /path/to/schooldb.sql;` (replace `/path/to/` with the actual path).
+
+3. **Configure Connection:**
+   - Open the `config.properties` file in the `project` package (`src/project/config.properties`).
+   - Update the database connection details with *your* MySQL username and password.
+
+## Running the Application
+
+1. In NetBeans, right-click on the main application file (e.g., `main.java` in the `management` package).
+2. Select "Run File."
+
+## Project Structure
+EduM/
+├── src/
+│   └── ... (your Java source code)
+├── lib/
+│   └── ... (JAR files)
+├── schooldb.sql
+└── README.md
+
+
+## Author
+
+savindu keshara 
+KADSE24.1F-022
