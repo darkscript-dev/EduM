@@ -2,7 +2,17 @@
 
 This is a Java Swing application for managing students, teachers, courses, and schedules.
 
-## Table of Contents
+For demonstration and testing purposes, the application uses the following default credentials:
+
+*   Username: `admin`
+*   Password: `admin`
+
+To change the username and password, follow these steps:
+
+1.  Locate the `config.properties` file in the `src/project` package.
+2.  Edit the `config.properties` file and replace the default `username` and `password` values with your chosen credentials.  **Do not commit the `config.properties` file containing your credentials to Git.**
+
+---  ## Table of Contents
 
 - [Software Requirements](#software-requirements)
 - [Project Setup](#project-setup)
@@ -15,8 +25,8 @@ This is a Java Swing application for managing students, teachers, courses, and s
 
 To build and run this application, you will need the following software:
 
-- **Java Development Kit (JDK) 23:**  Get it from [https://adoptium.net/](https://adoptium.net/).
-- **NetBeans IDE:**  (Or any IDE capable of building Java Swing applications).
+- **Java Development Kit (JDK) 23:** Get it from [https://adoptium.net/](https://adoptium.net/).
+- **NetBeans IDE:** (Or any IDE capable of building Java Swing applications).
 - **MySQL Server:** (Version 8.0 or higher recommended).
 
 ## Project Setup
@@ -44,7 +54,7 @@ To build and run this application, you will need the following software:
 
 2. **Import Schema:**
    - In your MySQL client, select the `schooldb` database.
-   - Run the `schooldb.sql` script (located in the project root) to create the tables.  In MySQL Workbench, open the file and click the Execute button. In the command line client, you can use `SOURCE /path/to/schooldb.sql;` (replace `/path/to/` with the actual path).
+   - Run the `schooldb.sql` script (located in the project root) to create the tables. In MySQL Workbench, open the file and click the Execute button. In the command line client, you can use `SOURCE /path/to/schooldb.sql;` (replace `/path/to/` with the actual path).
 
 3. **Configure Connection:**
    - Open the `config.properties` file in the `project` package (`src/project/config.properties`).
@@ -55,17 +65,15 @@ To build and run this application, you will need the following software:
 1. In NetBeans, right-click on the main application file (e.g., `main.java` in the `management` package).
 2. Select "Run File."
 
-
-
 ## Application Backup
 
 If you have any issues cloning the repository or setting up the project, you can download a pre-packaged version of the application from the following drive link:
 
 [Download EduM Application (ZIP)](https://drive.google.com/drive/folders/1KhsluVZH5J4EK8l5DCCKq1IoGyAzba06?usp=sharing)
 
-**Note:** This ZIP file contains all the necessary files, including the libraries and the database schema.  Please refer to the instructions above for database setup and running the application.
+**Note:** This ZIP file contains all the necessary files, including the libraries and the database schema. Please refer to the instructions above for database setup and running the application.
 
 ## Author
 
-savindu keshara 
+savindu keshara
 KADSE24.1F-022
