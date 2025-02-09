@@ -7,11 +7,6 @@ For demonstration and testing purposes, the application uses the following defau
 *   Username: `admin`
 *   Password: `admin`
 
-To change the username and password, follow these steps:
-
-1.  Locate the `config.properties` file in the `src/project` package.
-2.  Edit the `config.properties` file and replace the default `username` and `password` values with your chosen credentials.  **Do not commit the `config.properties` file containing your credentials to Git.**
-
 ---  ## Table of Contents
 
 - [Software Requirements](#software-requirements)
